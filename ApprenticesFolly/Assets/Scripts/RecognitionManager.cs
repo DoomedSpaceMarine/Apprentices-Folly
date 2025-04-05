@@ -8,19 +8,23 @@ public class RecognitionManager : MonoBehaviour
 
     public List<GameObject> shapeObjects;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private TrailRenderer trailRenderer;
+
+    Ray ray;
+    RaycastHit hit; 
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             SetPatternShape("triangle");
             SetPatternPosition();
+        }
+
+        if (trailRenderer.emitting)
+        {
+            
         }
     }
 
@@ -34,6 +38,10 @@ public class RecognitionManager : MonoBehaviour
                 foreach(Transform shape in trianglePattern.GetComponentInChildren<Transform>())
                 {
                     shapeObjects.Add(shape.gameObject); 
+                }
+                for (int i = 0; i < shapeObjects.Count; i++)
+                {
+                    shapeObjects[i].gameObject.SetActive(true);
                 }
                 break;
         }
