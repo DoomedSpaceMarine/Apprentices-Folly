@@ -13,11 +13,13 @@ public class ScoreSystem : MonoBehaviour
     [SerializeField] private TMP_Text scoreText;
 
     RecognitionManager recognitionManager;
+    ToggleBook toggleBook;
 
     private void OnEnable()
     {
         eventManager = FindObjectOfType<EventManager>();
         recognitionManager = FindObjectOfType<RecognitionManager>();
+        toggleBook = FindObjectOfType<ToggleBook>();
 
         eventManager.onCountScore += CountScore;
         eventManager.onAddScore += AddScore;
@@ -70,6 +72,21 @@ public class ScoreSystem : MonoBehaviour
             if (finalScore >= 80f)
             {
                 scoreText.text = finalScore.ToString("0.0") + " Success";
+
+                if(recognitionManager.zonePattern == "triangle" && !toggleBook.bookIsOpen)
+                {
+                    eventManager.GlyphDrawn("triangle");
+                }
+
+                if (recognitionManager.zonePattern == "m" && !toggleBook.bookIsOpen)
+                {
+                    eventManager.GlyphDrawn("m");
+                }
+
+                if (recognitionManager.zonePattern == "rune" && !toggleBook.bookIsOpen)
+                {
+                    eventManager.GlyphDrawn("rune");
+                }
             }
 
             else if (finalScore < 80f)

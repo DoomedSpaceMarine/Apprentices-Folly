@@ -7,6 +7,8 @@ public class RecognitionManager : MonoBehaviour
     EventManager eventManager;
 
     [SerializeField] private GameObject trianglePattern;
+    [SerializeField] private GameObject mGlyphPattern;
+    [SerializeField] private GameObject runeGlyphPattern;
 
     public List<GameObject> shapeObjects;
 
@@ -59,6 +61,34 @@ public class RecognitionManager : MonoBehaviour
                     shapeObjects[i].gameObject.SetActive(true);
                 }
                 break;
+            case "m":
+                //Forms a list from the pattern child gameobjects
+                foreach (Transform shape in mGlyphPattern.GetComponentInChildren<Transform>())
+                {
+                    shapeObjects.Add(shape.gameObject);
+                }
+                //Send list size as the max score for the scoring system
+                eventManager.GetMaxScore(shapeObjects.Count);
+                //Sets objects on the shape list active
+                for (int i = 0; i < shapeObjects.Count; i++)
+                {
+                    shapeObjects[i].gameObject.SetActive(true);
+                }
+                break;
+            case "rune":
+                //Forms a list from the pattern child gameobjects
+                foreach (Transform shape in runeGlyphPattern.GetComponentInChildren<Transform>())
+                {
+                    shapeObjects.Add(shape.gameObject);
+                }
+                //Send list size as the max score for the scoring system
+                eventManager.GetMaxScore(shapeObjects.Count);
+                //Sets objects on the shape list active
+                for (int i = 0; i < shapeObjects.Count; i++)
+                {
+                    shapeObjects[i].gameObject.SetActive(true);
+                }
+                break;
             //When not in a zone
             case "":
                 return;
@@ -71,6 +101,8 @@ public class RecognitionManager : MonoBehaviour
         if (dynamic)
         {
             trianglePattern.transform.position = Input.mousePosition;
+            mGlyphPattern.transform.position = Input.mousePosition;
+            runeGlyphPattern.transform.position = Input.mousePosition;
         }
         else
         {
@@ -94,9 +126,17 @@ public class RecognitionManager : MonoBehaviour
                 case "triangle":
                     trianglePattern.SetActive(true);
                     break;
+                case "m":
+                    mGlyphPattern.SetActive(true);
+                    break;
+                case "rune":
+                    runeGlyphPattern.SetActive(true);
+                    break;
                 case "":
                     trianglePattern.SetActive(false);
-                    break;
+                    mGlyphPattern.SetActive(false);
+                    runeGlyphPattern.SetActive(false);
+                break;
 
             }
         

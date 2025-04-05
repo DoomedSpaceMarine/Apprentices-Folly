@@ -3,11 +3,27 @@ using UnityEngine.InputSystem;
 
 public class WizardBook : MonoBehaviour
 {
+    EventManager eventManager;
+    ToggleBook toggleBook;
+
     [SerializeField] private GameObject[] pagesLeft;
     [SerializeField] private GameObject[] pagesRight;
 
-    private int maxPages = 3;
+    private int maxPages = 0;
     private int pageState;
+
+    private void OnEnable()
+    {
+        eventManager = FindObjectOfType<EventManager>();
+        toggleBook = FindObjectOfType<ToggleBook>();
+
+        eventManager.onAddToMaxPages += AddToMaxPages;
+    }
+
+    private void OnDisable()
+    {
+        eventManager.onAddToMaxPages -= AddToMaxPages;
+    }
 
     private void Update()
     {
@@ -62,7 +78,7 @@ public class WizardBook : MonoBehaviour
 
     public void PagesForward(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && toggleBook.bookIsOpen)
         {
             if (pageState < maxPages)
             {
@@ -73,7 +89,7 @@ public class WizardBook : MonoBehaviour
     }
     public void PagesBackward(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (context.performed && toggleBook.bookIsOpen)
         {
             if (pageState > 0)
             {
@@ -81,5 +97,10 @@ public class WizardBook : MonoBehaviour
             }
         }
         
+    }
+
+    private void AddToMaxPages()
+    {
+        maxPages++;
     }
 }

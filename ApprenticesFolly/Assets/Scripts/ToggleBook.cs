@@ -7,6 +7,11 @@ public class ToggleBook : MonoBehaviour
 
     [SerializeField] private GameObject wizardBook;
 
+    private void Start()
+    {
+        wizardBook.SetActive(false);
+    }
+
     private void ToggleWizardBook()
     {
         bookIsOpen = !bookIsOpen;
