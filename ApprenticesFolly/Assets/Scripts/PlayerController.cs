@@ -21,6 +21,7 @@ public class PlayerController : MonoBehaviour
     [Header("References")]
     private CharacterController characterController;
     [SerializeField] private TrailRendererManager trailRendererManager;
+    [SerializeField] private ToggleBook toggleBook;
 
     private void Awake()
     {
@@ -42,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessMovement()
     {
-        if (!trailRendererManager.trailRenderer.emitting)
+        if (!trailRendererManager.trailRenderer.emitting && !toggleBook.bookIsOpen)
         {
             currentInputVector = Vector2.SmoothDamp(currentInputVector, movementDirection, ref smoothInputVelocity, smoothInputSpeed);
             Vector3 move = new Vector3(currentInputVector.x, 0, currentInputVector.y);
