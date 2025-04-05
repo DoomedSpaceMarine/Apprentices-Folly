@@ -557,11 +557,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 650742806}
+  m_Father: {fileID: 1522479963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 235, y: 170.025}
+  m_AnchoredPosition: {x: 81, y: 29}
   m_SizeDelta: {x: 960, y: 540}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543909570
@@ -964,7 +964,6 @@ RectTransform:
   - {fileID: 1081237652}
   - {fileID: 642522781}
   - {fileID: 1204153410}
-  - {fileID: 543909569}
   m_Father: {fileID: 1522479963}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2095,6 +2094,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1705362732}
+  - {fileID: 543909569}
   - {fileID: 650742806}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2208,6 +2208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trianglePattern: {fileID: 650742805}
+  shapeObjects: []
 --- !u!4 &1696839995
 Transform:
   m_ObjectHideFlags: 0
