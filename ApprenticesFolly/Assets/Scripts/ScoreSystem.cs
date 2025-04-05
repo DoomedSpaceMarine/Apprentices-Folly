@@ -5,6 +5,7 @@ public class ScoreSystem : MonoBehaviour
     EventManager eventManager;
 
     private int currentScore;
+    private int maxScore;
 
     private void OnEnable()
     {
@@ -12,12 +13,14 @@ public class ScoreSystem : MonoBehaviour
 
         eventManager.onCountScore += CountScore;
         eventManager.onAddScore += AddScore;
+        eventManager.onGetMaxScore += GetMaxScore;
     }
 
     private void OnDisable()
     {
         eventManager.onCountScore -= CountScore;
         eventManager.onAddScore -= AddScore;
+        eventManager.onGetMaxScore -= GetMaxScore;
     }
 
     private void CountScore()
@@ -28,5 +31,10 @@ public class ScoreSystem : MonoBehaviour
     private void AddScore(int addition)
     {
         currentScore += addition;   
+    }
+
+    private void GetMaxScore(int shapeListLenght)
+    {
+        maxScore = shapeListLenght;
     }
 }

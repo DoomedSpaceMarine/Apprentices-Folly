@@ -4,6 +4,8 @@ using System.Collections.Generic;
 
 public class RecognitionManager : MonoBehaviour
 {
+    EventManager eventManager;
+
     [SerializeField] private GameObject trianglePattern;
 
     public List<GameObject> shapeObjects;
@@ -11,7 +13,12 @@ public class RecognitionManager : MonoBehaviour
     [SerializeField] private TrailRenderer trailRenderer;
 
     Ray ray;
-    RaycastHit hit; 
+    RaycastHit hit;
+
+    private void Awake()
+    {
+        eventManager = FindObjectOfType<EventManager>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -20,11 +27,6 @@ public class RecognitionManager : MonoBehaviour
         {
             SetPatternShape("triangle");
             SetPatternPosition();
-        }
-
-        if (trailRenderer.emitting)
-        {
-            
         }
     }
 
@@ -35,10 +37,14 @@ public class RecognitionManager : MonoBehaviour
         switch (pattern)
         {
             case "triangle":
+                //Forms a list from the pattern child gameobjects
                 foreach(Transform shape in trianglePattern.GetComponentInChildren<Transform>())
                 {
                     shapeObjects.Add(shape.gameObject); 
                 }
+                //Send list size as the max score for the scoring system
+                eventManager.GetMaxScore(shapeObjects.Count);
+                //Sets objects on the shape list active
                 for (int i = 0; i < shapeObjects.Count; i++)
                 {
                     shapeObjects[i].gameObject.SetActive(true);
