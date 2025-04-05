@@ -18,6 +18,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 currentInputVector;
     private Vector2 smoothInputVelocity;
 
+    [Header("Gravity")]
+    public float gravity = -9.8f;
+    private bool isGrounded;
+
     [Header("References")]
     private CharacterController characterController;
     [SerializeField] private TrailRendererManager trailRendererManager;
@@ -34,11 +38,16 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        isGrounded = characterController.isGrounded;
+
         //Processing movement
         ProcessMovement();
 
         //Set movement speeds 
         SetMovementSpeeds();
+
+        //Gravity
+        Gravity();
     }
 
     private void ProcessMovement()
@@ -81,5 +90,16 @@ public class PlayerController : MonoBehaviour
     public void MoveInput(InputAction.CallbackContext context)
     {
         movementDirection = context.ReadValue<Vector2>();
+    }
+
+    private void Gravity()
+    {
+        playerVelocity.y += gravity * Time.deltaTime;
+
+        if (isGrounded && playerVelocity.y < 0)
+        {
+            playerVelocity.y = -2f;
+        }
+        characterController.Move(playerVelocity * Time.deltaTime);
     }
 }

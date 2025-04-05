@@ -99,7 +99,7 @@ public class ScoreSystem : MonoBehaviour
 
     private IEnumerator DisableScoreText()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(5);
         scoreText.gameObject.SetActive(false);
     }
 }
