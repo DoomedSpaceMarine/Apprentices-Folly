@@ -32,6 +32,11 @@ public class TrailRendererManager : MonoBehaviour
         {
             trailRenderer.emitting = false;
         }
+
+        if(Input.GetMouseButtonUp(0))
+        {
+            eventManager.CountScore();
+        }
         
     }
 }

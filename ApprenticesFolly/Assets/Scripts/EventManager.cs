@@ -10,12 +10,12 @@ public class EventManager : MonoBehaviour
     public void CountScore() => onCountScore?.Invoke();
 
     //Add Score Event
-    public event Action<int> onAddScore;
-    public void AddScore(int addition) => onAddScore?.Invoke(addition);
+    public event Action<float> onAddScore;
+    public void AddScore(float addition) => onAddScore?.Invoke(addition);
 
     //Get Max Score Event
-    public event Action<int> onGetMaxScore;
-    public void GetMaxScore(int shapeListLenght) => onGetMaxScore?.Invoke(shapeListLenght);
+    public event Action<float> onGetMaxScore;
+    public void GetMaxScore(float shapeListLenght) => onGetMaxScore?.Invoke(shapeListLenght);
 
     //Reset Score
     public event Action onResetScore;

@@ -4,9 +4,9 @@ public class ScoreSystem : MonoBehaviour
 {
     EventManager eventManager;
 
-    private int currentScore;
-    private int maxScore;
-    private int finalScore;
+    private float currentScore;
+    private float maxScore;
+    private float finalScore;
 
     private void OnEnable()
     {
@@ -31,12 +31,12 @@ public class ScoreSystem : MonoBehaviour
         finalScore = currentScore / maxScore * 100;
     }
 
-    private void AddScore(int addition)
+    private void AddScore(float addition)
     {
         currentScore += addition;   
     }
 
-    private void GetMaxScore(int shapeListLenght)
+    private void GetMaxScore(float shapeListLenght)
     {
         maxScore = shapeListLenght;
     }
