@@ -33,6 +33,7 @@ public class RecognitionManager : MonoBehaviour
     private void SetPatternShape(string pattern)
     {
         shapeObjects.Clear();
+        eventManager.ResetScore();
 
         switch (pattern)
         {

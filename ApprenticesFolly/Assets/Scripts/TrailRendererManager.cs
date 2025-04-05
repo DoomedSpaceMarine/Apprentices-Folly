@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class TrailRendererManager : MonoBehaviour
 {
+    EventManager eventManager;
+
     private Vector3 position;
 
     public float zOffset;
@@ -11,6 +13,8 @@ public class TrailRendererManager : MonoBehaviour
     private void Awake()
     {
        trailRenderer = this.gameObject.GetComponent<TrailRenderer>();
+
+       eventManager = FindObjectOfType<EventManager>();
     }
 
     // Update is called once per frame

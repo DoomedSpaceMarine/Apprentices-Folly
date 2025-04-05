@@ -15,5 +15,9 @@ public class EventManager : MonoBehaviour
 
     //Get Max Score Event
     public event Action<int> onGetMaxScore;
-    public void GetMaxScore(int shapeListLenght) => onGetMaxScore?.Invoke(shapeListLenght); 
+    public void GetMaxScore(int shapeListLenght) => onGetMaxScore?.Invoke(shapeListLenght);
+
+    //Reset Score
+    public event Action onResetScore;
+    public void ResetScore() => onResetScore?.Invoke(); 
 }
