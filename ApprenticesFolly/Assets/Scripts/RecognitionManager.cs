@@ -12,11 +12,20 @@ public class RecognitionManager : MonoBehaviour
 
     [SerializeField] private TrailRenderer trailRenderer;
 
+    public string zonePattern;
+
     private bool dynamicMode = true;
 
-    private void Awake()
+    private void OnEnable()
     {
         eventManager = FindObjectOfType<EventManager>();
+
+        eventManager.onSetSpellcastingZone += SetSpellcastingZone;
+    }
+
+    private void OnDisable()
+    {
+        eventManager.onSetSpellcastingZone -= SetSpellcastingZone;
     }
 
     // Update is called once per frame
@@ -24,7 +33,7 @@ public class RecognitionManager : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            SetPatternShape("triangle");
+            SetPatternShape(zonePattern);
             SetPatternPosition(dynamicMode);
         }
     }
@@ -50,6 +59,10 @@ public class RecognitionManager : MonoBehaviour
                     shapeObjects[i].gameObject.SetActive(true);
                 }
                 break;
+            //When not in a zone
+            case "":
+                return;
+                break;
         }
     }
 
@@ -69,5 +82,23 @@ public class RecognitionManager : MonoBehaviour
     private void ToggleDynamicMode(bool isDynamic)
     {
         dynamicMode = isDynamic;    
+    }
+
+    private void SetSpellcastingZone(string zone)
+    {
+        zonePattern = zone; 
+
+        
+            switch (zonePattern)
+            {
+                case "triangle":
+                    trianglePattern.SetActive(true);
+                    break;
+                case "":
+                    trianglePattern.SetActive(false);
+                    break;
+
+            }
+        
     }
 }

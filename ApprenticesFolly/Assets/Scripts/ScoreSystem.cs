@@ -12,9 +12,12 @@ public class ScoreSystem : MonoBehaviour
 
     [SerializeField] private TMP_Text scoreText;
 
+    RecognitionManager recognitionManager;
+
     private void OnEnable()
     {
         eventManager = FindObjectOfType<EventManager>();
+        recognitionManager = FindObjectOfType<RecognitionManager>();
 
         eventManager.onCountScore += CountScore;
         eventManager.onAddScore += AddScore;
@@ -60,17 +63,21 @@ public class ScoreSystem : MonoBehaviour
 
     private void ShowScore()
     {
-        scoreText.gameObject.SetActive(true);
-        StartCoroutine(DisableScoreText());
-        if(finalScore >= 80f)
+        if(recognitionManager.zonePattern != "")
         {
-            scoreText.text = finalScore.ToString("0.0") + " Success";
-        }
+            scoreText.gameObject.SetActive(true);
+            StartCoroutine(DisableScoreText());
+            if (finalScore >= 80f)
+            {
+                scoreText.text = finalScore.ToString("0.0") + " Success";
+            }
 
-        else if(finalScore < 80f)
-        {
-            scoreText.text = finalScore.ToString("0.0") + " Fail";
+            else if (finalScore < 80f)
+            {
+                scoreText.text = finalScore.ToString("0.0") + " Fail";
+            }
         }
+        
     }
 
     private IEnumerator DisableScoreText()

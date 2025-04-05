@@ -19,5 +19,9 @@ public class EventManager : MonoBehaviour
 
     //Reset Score
     public event Action onResetScore;
-    public void ResetScore() => onResetScore?.Invoke(); 
+    public void ResetScore() => onResetScore?.Invoke();
+
+    //Set Spellcasting Zone
+    public event Action<string> onSetSpellcastingZone;
+    public void SetSpellcastingZone(string zone) => onSetSpellcastingZone?.Invoke(zone);   
 }
