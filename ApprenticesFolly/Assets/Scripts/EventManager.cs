@@ -23,5 +23,10 @@ public class EventManager : MonoBehaviour
 
     //Set Spellcasting Zone
     public event Action<string> onSetSpellcastingZone;
-    public void SetSpellcastingZone(string zone) => onSetSpellcastingZone?.Invoke(zone);   
+    public void SetSpellcastingZone(string zone) => onSetSpellcastingZone?.Invoke(zone);
+
+    //Add Wizard pages
+    public event Action onAddToMaxPages;
+    public void AddToMaxPages() => onAddToMaxPages?.Invoke();   
+
 }
