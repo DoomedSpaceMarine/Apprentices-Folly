@@ -27,6 +27,10 @@ public class EventManager : MonoBehaviour
 
     //Add Wizard pages
     public event Action onAddToMaxPages;
-    public void AddToMaxPages() => onAddToMaxPages?.Invoke();   
+    public void AddToMaxPages() => onAddToMaxPages?.Invoke();
+
+    //Glyph drawn
+    public event Action<string> onGlyphDrawn;
+    public void GlyphDrawn(string glyph) => onGlyphDrawn?.Invoke(glyph);    
 
 }
