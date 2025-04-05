@@ -4,10 +4,12 @@ using UnityEngine.EventSystems;
 public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     TrailRendererManager trailRenderer;
+    EventManager eventManager;
 
     private void Start()
     {
         trailRenderer = FindObjectOfType<TrailRendererManager>();
+        eventManager = FindObjectOfType<EventManager>();
     }
 
     public void OnPointerEnter(PointerEventData pointerEventData)
@@ -15,6 +17,7 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         if (trailRenderer.trailRenderer.emitting)
         {
             this.gameObject.SetActive(false);
+            eventManager.AddScore(1);
         }
     }
 
@@ -23,6 +26,7 @@ public class MouseOver : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         if (trailRenderer.trailRenderer.emitting)
         {
             this.gameObject.SetActive(false);
+            eventManager.AddScore(1);
         }
     }
 
