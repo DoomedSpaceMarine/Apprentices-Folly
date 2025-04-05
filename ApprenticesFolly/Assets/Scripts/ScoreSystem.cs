@@ -62,17 +62,12 @@ public class ScoreSystem : MonoBehaviour
     {
         scoreText.gameObject.SetActive(true);
         StartCoroutine(DisableScoreText());
-        if(finalScore >= 85f)
+        if(finalScore >= 80f)
         {
-            scoreText.text = finalScore.ToString("0.0") + " Great";
+            scoreText.text = finalScore.ToString("0.0") + " Success";
         }
 
-        else if(finalScore >= 50 && finalScore < 85)
-        {
-            scoreText.text = finalScore.ToString("0.0") + " Average";
-        }
-
-        else if(finalScore < 50)
+        else if(finalScore < 80f)
         {
             scoreText.text = finalScore.ToString("0.0") + " Fail";
         }

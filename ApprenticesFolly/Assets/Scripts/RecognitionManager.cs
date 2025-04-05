@@ -12,8 +12,7 @@ public class RecognitionManager : MonoBehaviour
 
     [SerializeField] private TrailRenderer trailRenderer;
 
-    Ray ray;
-    RaycastHit hit;
+    private bool dynamicMode = true;
 
     private void Awake()
     {
@@ -26,7 +25,7 @@ public class RecognitionManager : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             SetPatternShape("triangle");
-            SetPatternPosition();
+            SetPatternPosition(dynamicMode);
         }
     }
 
@@ -54,8 +53,21 @@ public class RecognitionManager : MonoBehaviour
         }
     }
 
-    private void SetPatternPosition()
+    private void SetPatternPosition(bool dynamic)
     {
-        trianglePattern.transform.position = Input.mousePosition;
+        if (dynamic)
+        {
+            trianglePattern.transform.position = Input.mousePosition;
+        }
+        else
+        {
+            return;
+        }
+        
+    }
+
+    private void ToggleDynamicMode(bool isDynamic)
+    {
+        dynamicMode = isDynamic;    
     }
 }
