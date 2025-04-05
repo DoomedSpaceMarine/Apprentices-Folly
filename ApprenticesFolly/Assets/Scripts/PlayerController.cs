@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("References")]
     private CharacterController characterController;
+    [SerializeField] private TrailRendererManager trailRendererManager;
 
     private void Awake()
     {
@@ -41,9 +42,12 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessMovement()
     {
-        currentInputVector = Vector2.SmoothDamp(currentInputVector, movementDirection, ref smoothInputVelocity, smoothInputSpeed);
-        Vector3 move = new Vector3(currentInputVector.x, 0, currentInputVector.y);
-        characterController.Move(transform.TransformDirection(move) * Time.deltaTime * movementSpeed);
+        if (!trailRendererManager.trailRenderer.emitting)
+        {
+            currentInputVector = Vector2.SmoothDamp(currentInputVector, movementDirection, ref smoothInputVelocity, smoothInputSpeed);
+            Vector3 move = new Vector3(currentInputVector.x, 0, currentInputVector.y);
+            characterController.Move(transform.TransformDirection(move) * Time.deltaTime * movementSpeed);
+        }
     }
 
     private void SetMovementSpeeds()

@@ -2410,6 +2410,7 @@ MonoBehaviour:
   walkForwardSpeed: 5
   walkBackwardSpeed: 2
   smoothInputSpeed: 0.2
+  trailRendererManager: {fileID: 603674001}
 --- !u!143 &1218402384
 CharacterController:
   m_ObjectHideFlags: 0
