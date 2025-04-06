@@ -8,6 +8,8 @@ public class RecognitionManager : MonoBehaviour
     EventManager eventManager;
 
     public bool spellcastingMode;
+    public bool spellcastingKeyIsheld;
+
     [SerializeField] private GameObject spellcastingUI;
 
     [SerializeField] private GameObject triangleObject;
@@ -216,6 +218,16 @@ public class RecognitionManager : MonoBehaviour
             {
                 spellcastingMode = false;
             }
+        }
+
+        if (context.started)
+        {
+            spellcastingKeyIsheld = true;
+        }
+
+        if (context.canceled)
+        {
+            spellcastingKeyIsheld = false;
         }
     }
 

@@ -29,7 +29,10 @@ public class ToggleBook : MonoBehaviour
             else
             {
                 wizardBook.SetActive(false);
-                recognitionManager.spellcastingMode = false;
+                if (!recognitionManager.spellcastingKeyIsheld)
+                {
+                    recognitionManager.spellcastingMode = false;
+                }
             }
         }
        
