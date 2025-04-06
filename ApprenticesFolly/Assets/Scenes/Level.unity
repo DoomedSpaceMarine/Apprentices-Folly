@@ -988,7 +988,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 7344332327683180517, guid: 78490bcb42aa28e4b8c7793115e67db1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 189980051}
+    - targetCorrespondingSourceObject: {fileID: 8852909333853331176, guid: 78490bcb42aa28e4b8c7793115e67db1, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1386883755}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78490bcb42aa28e4b8c7793115e67db1, type: 3}
 --- !u!1 &165656040
@@ -1255,6 +1261,41 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 183498975}
   m_CullTransparentMesh: 1
+--- !u!1 &189980050
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 189980051}
+  m_Layer: 5
+  m_Name: PageD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &189980051
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 189980050}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1704538938}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -742, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &196990008
 GameObject:
   m_ObjectHideFlags: 0
@@ -5292,6 +5333,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 735969131}
   m_CullTransparentMesh: 1
+--- !u!224 &736757972 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 8852909333853331176, guid: 78490bcb42aa28e4b8c7793115e67db1, type: 3}
+  m_PrefabInstance: {fileID: 139151508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &756954596
 GameObject:
   m_ObjectHideFlags: 0
@@ -6809,7 +6855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f094affb5f53904f865b52ebbb495cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: (F) Pick up pages
+  interactionPrompt: (Right Click) Pick up pages
   page: {fileID: 892368192}
 --- !u!65 &892368194
 BoxCollider:
@@ -9632,6 +9678,41 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1386883754
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1386883755}
+  m_Layer: 5
+  m_Name: PageD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1386883755
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1386883754}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 736757972}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -697.99994, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1394631567
 GameObject:
   m_ObjectHideFlags: 0
@@ -11663,10 +11744,12 @@ MonoBehaviour:
   - {fileID: 1538157730}
   - {fileID: 829456680}
   - {fileID: 667139849}
+  - {fileID: 189980050}
   pagesRight:
   - {fileID: 1569422473}
   - {fileID: 378509163}
   - {fileID: 1195965711}
+  - {fileID: 1386883754}
 --- !u!1 &1669674191
 GameObject:
   m_ObjectHideFlags: 0
@@ -11948,7 +12031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c48136118bfbd4a9dcf823a0626482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: (F)Pickup Tome
+  interactionPrompt: (Right Click) Pickup Tome
   toggleBook: {fileID: 1687252487}
 --- !u!65 &1683918872
 BoxCollider:
@@ -12111,6 +12194,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1698696367}
   m_CullTransparentMesh: 1
+--- !u!224 &1704538938 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7344332327683180517, guid: 78490bcb42aa28e4b8c7793115e67db1, type: 3}
+  m_PrefabInstance: {fileID: 139151508}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1706697024
 GameObject:
   m_ObjectHideFlags: 0
@@ -13124,7 +13212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f094affb5f53904f865b52ebbb495cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: (F) Pick up pages
+  interactionPrompt: (Right Click) Pick up pages
   page: {fileID: 1848260511}
 --- !u!65 &1848260513
 BoxCollider:
@@ -17443,6 +17531,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114916060535326239, guid: 623ddad8008310c4f976a1fa83d534df, type: 3}
+      propertyPath: interactionPrompt
+      value: (Right Click) Pick up pages
+      objectReference: {fileID: 0}
     - target: {fileID: 616951099279725659, guid: 623ddad8008310c4f976a1fa83d534df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.049
