@@ -12,6 +12,8 @@ public class ScoreSystem : MonoBehaviour
 
     [SerializeField] private TMP_Text scoreText;
 
+    [SerializeField] private AudioSource sealUnlocked;
+
     RecognitionManager recognitionManager;
     ToggleBook toggleBook;
 
@@ -83,16 +85,19 @@ public class ScoreSystem : MonoBehaviour
                 if(recognitionManager.zonePattern == "triangle" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("triangle");
+                    sealUnlocked.Play();
                 }
 
                 if (recognitionManager.zonePattern == "m" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("m");
+                    sealUnlocked.Play();
                 }
 
                 if (recognitionManager.zonePattern == "rune" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("rune");
+                    sealUnlocked.Play();
                 }
             }
 
