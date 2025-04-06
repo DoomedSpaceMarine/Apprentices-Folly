@@ -4,6 +4,7 @@ using UnityEngine.InputSystem;
 public class ToggleBook : MonoBehaviour
 {
     public bool bookIsOpen;
+    public bool wizardBookCollected;
 
     [SerializeField] private GameObject wizardBook;
 
@@ -16,18 +17,22 @@ public class ToggleBook : MonoBehaviour
 
     private void ToggleWizardBook()
     {
-        bookIsOpen = !bookIsOpen;
+        if (wizardBookCollected)
+        {
+            bookIsOpen = !bookIsOpen;
 
-        if(bookIsOpen)
-        {
-            wizardBook.SetActive(true);
-            recognitionManager.spellcastingMode = true;
+            if (bookIsOpen)
+            {
+                wizardBook.SetActive(true);
+                recognitionManager.spellcastingMode = true;
+            }
+            else
+            {
+                wizardBook.SetActive(false);
+                recognitionManager.spellcastingMode = false;
+            }
         }
-        else
-        {
-            wizardBook.SetActive(false);
-            recognitionManager.spellcastingMode = false;
-        }
+       
     }
 
     public void ToggleBookInput(InputAction.CallbackContext context)
