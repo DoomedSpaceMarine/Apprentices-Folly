@@ -6855,7 +6855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f094affb5f53904f865b52ebbb495cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: (Left Click) Pick up pages
+  interactionPrompt: (Right Click) Pick up pages
   page: {fileID: 892368192}
 --- !u!65 &892368194
 BoxCollider:
@@ -12031,7 +12031,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7c48136118bfbd4a9dcf823a0626482, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: (Left Click) Pickup Tome
+  interactionPrompt: (Right Click) Pickup Tome
   toggleBook: {fileID: 1687252487}
 --- !u!65 &1683918872
 BoxCollider:
@@ -13212,7 +13212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f094affb5f53904f865b52ebbb495cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interactionPrompt: (Left Click) Pick up pages
+  interactionPrompt: (Right Click) Pick up pages
   page: {fileID: 1848260511}
 --- !u!65 &1848260513
 BoxCollider:
@@ -17533,7 +17533,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 114916060535326239, guid: 623ddad8008310c4f976a1fa83d534df, type: 3}
       propertyPath: interactionPrompt
-      value: (Left Click) Pick up pages
+      value: (Right Click) Pick up pages
       objectReference: {fileID: 0}
     - target: {fileID: 616951099279725659, guid: 623ddad8008310c4f976a1fa83d534df, type: 3}
       propertyPath: m_LocalPosition.x
