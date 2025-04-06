@@ -25,6 +25,7 @@ public class ScoreSystem : MonoBehaviour
         eventManager.onAddScore += AddScore;
         eventManager.onGetMaxScore += GetMaxScore;
         eventManager.onResetScore += ResetScore;
+        eventManager.onSubstractScore += SubstractScore;
     }
 
     private void OnDisable()
@@ -33,6 +34,7 @@ public class ScoreSystem : MonoBehaviour
         eventManager.onAddScore -= AddScore;
         eventManager.onGetMaxScore -= GetMaxScore;
         eventManager.onResetScore -= ResetScore;
+        eventManager.onSubstractScore -= SubstractScore;
     }
 
     private void Start()
@@ -49,6 +51,11 @@ public class ScoreSystem : MonoBehaviour
     private void AddScore(float addition)
     {
         currentScore += addition;   
+    }
+
+    private void SubstractScore(float substraction)
+    {
+        currentScore -= substraction;   
     }
 
     private void GetMaxScore(float shapeListLenght)

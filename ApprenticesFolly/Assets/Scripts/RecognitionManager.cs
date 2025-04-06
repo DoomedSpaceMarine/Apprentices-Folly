@@ -6,11 +6,20 @@ public class RecognitionManager : MonoBehaviour
 {
     EventManager eventManager;
 
+    [SerializeField] private GameObject triangleObject;
+    [SerializeField] private GameObject mGlyphObject;
+    [SerializeField] private GameObject runeGlyphObject;
+
     [SerializeField] private GameObject trianglePattern;
     [SerializeField] private GameObject mGlyphPattern;
     [SerializeField] private GameObject runeGlyphPattern;
 
+    [SerializeField] private GameObject triangleMinus;
+    [SerializeField] private GameObject mMinus;
+    [SerializeField] private GameObject runeMinus;
+
     public List<GameObject> shapeObjects;
+    public List<GameObject> minusObjects;
 
     [SerializeField] private TrailRenderer trailRenderer;
 
@@ -43,6 +52,7 @@ public class RecognitionManager : MonoBehaviour
     private void SetPatternShape(string pattern)
     {
         shapeObjects.Clear();
+        minusObjects.Clear();
         eventManager.ResetScore();
 
         switch (pattern)
@@ -60,6 +70,16 @@ public class RecognitionManager : MonoBehaviour
                 {
                     shapeObjects[i].gameObject.SetActive(true);
                 }
+                foreach (Transform minus in triangleMinus.GetComponentInChildren<Transform>())
+                {
+                    minusObjects.Add(minus.gameObject);
+                }
+                //Sets objects on the minus list active
+                for (int i = 0; i < minusObjects.Count; i++)
+                {
+                    minusObjects[i].gameObject.SetActive(true);
+                }
+                //
                 break;
             case "m":
                 //Forms a list from the pattern child gameobjects
@@ -73,6 +93,15 @@ public class RecognitionManager : MonoBehaviour
                 for (int i = 0; i < shapeObjects.Count; i++)
                 {
                     shapeObjects[i].gameObject.SetActive(true);
+                }
+                foreach (Transform minus in mMinus.GetComponentInChildren<Transform>())
+                {
+                    minusObjects.Add(minus.gameObject);
+                }
+                //Sets objects on the minus list active
+                for (int i = 0; i < minusObjects.Count; i++)
+                {
+                    minusObjects[i].gameObject.SetActive(true);
                 }
                 break;
             case "rune":
@@ -88,6 +117,15 @@ public class RecognitionManager : MonoBehaviour
                 {
                     shapeObjects[i].gameObject.SetActive(true);
                 }
+                foreach (Transform minus in runeMinus.GetComponentInChildren<Transform>())
+                {
+                    minusObjects.Add(minus.gameObject);
+                }
+                //Sets objects on the minus list active
+                for (int i = 0; i < minusObjects.Count; i++)
+                {
+                    minusObjects[i].gameObject.SetActive(true);
+                }
                 break;
             //When not in a zone
             case "":
@@ -100,9 +138,9 @@ public class RecognitionManager : MonoBehaviour
     {
         if (dynamic)
         {
-            trianglePattern.transform.position = Input.mousePosition;
-            mGlyphPattern.transform.position = Input.mousePosition;
-            runeGlyphPattern.transform.position = Input.mousePosition;
+            triangleObject.transform.position = Input.mousePosition;
+            mGlyphObject.transform.position = Input.mousePosition;
+            runeGlyphObject.transform.position = Input.mousePosition;
         }
         else
         {
@@ -125,17 +163,23 @@ public class RecognitionManager : MonoBehaviour
             {
                 case "triangle":
                     trianglePattern.SetActive(true);
+                    triangleMinus.SetActive(true);
                     break;
                 case "m":
                     mGlyphPattern.SetActive(true);
+                    mMinus.SetActive(true);  
                     break;
                 case "rune":
                     runeGlyphPattern.SetActive(true);
+                    runeMinus.SetActive(true);
                     break;
                 case "":
                     trianglePattern.SetActive(false);
                     mGlyphPattern.SetActive(false);
                     runeGlyphPattern.SetActive(false);
+                    triangleMinus.SetActive(false);
+                    mMinus.SetActive(false);
+                    runeMinus.SetActive(false);
                 break;
 
             }
