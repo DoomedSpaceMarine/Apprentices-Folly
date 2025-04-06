@@ -10,6 +10,8 @@ public class TrailRendererManager : MonoBehaviour
 
     public TrailRenderer trailRenderer;
 
+    [SerializeField] private RecognitionManager recognitionManager;
+
     private void Awake()
     {
        trailRenderer = this.gameObject.GetComponent<TrailRenderer>();
@@ -24,7 +26,7 @@ public class TrailRendererManager : MonoBehaviour
         position.z = zOffset;   
         transform.position = Camera.main.ScreenToWorldPoint(position);
         
-        if(Input.GetMouseButton(0))
+        if(Input.GetMouseButton(0) && recognitionManager.spellcastingMode)
         {
             trailRenderer.emitting = true;
         }
