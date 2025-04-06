@@ -103,6 +103,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tome
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 1258feb34d5c41a4aa33d3f4dae83e79, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -110,6 +114,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1258feb34d5c41a4aa33d3f4dae83e79, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8855459706427196622}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1258feb34d5c41a4aa33d3f4dae83e79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7112214707069619593}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 1258feb34d5c41a4aa33d3f4dae83e79, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 832218093938459485}
   m_SourcePrefab: {fileID: 100100000, guid: 1258feb34d5c41a4aa33d3f4dae83e79, type: 3}
 --- !u!1 &7120035894100963972 stripped
 GameObject:
@@ -138,6 +148,41 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &7112214707069619593
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7120035894100963972}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.3424394, y: 0.116038784, z: 0.43508837}
+  m_Center: {x: -0.0009205714, y: 0.05753211, z: -0.000002026558}
+--- !u!114 &832218093938459485
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7120035894100963972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7c48136118bfbd4a9dcf823a0626482, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactionPrompt: Right Mouse Click - To pick up
+  toggleBook: {fileID: 0}
 --- !u!4 &7603380469175642174 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1258feb34d5c41a4aa33d3f4dae83e79, type: 3}

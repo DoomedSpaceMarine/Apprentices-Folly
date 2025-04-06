@@ -11132,7 +11132,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: F - Pick up pages
+  m_text: Interact
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11600,46 +11600,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1683060677}
   m_CullTransparentMesh: 1
---- !u!1 &1683918869 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7120035894100963972, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
-  m_PrefabInstance: {fileID: 1722144769}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1683918871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683918869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7c48136118bfbd4a9dcf823a0626482, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  interactionPrompt: (F)Pickup Tome
-  toggleBook: {fileID: 1687252487}
---- !u!65 &1683918872
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1683918869}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.3424394, y: 0.116038784, z: 0.43508837}
-  m_Center: {x: -0.0009205714, y: 0.05753211, z: -0.000002026558}
 --- !u!1 &1687252484 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7529758864923273980, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
@@ -11999,68 +11959,46 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -110.513
       objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 12.516
-      objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.514
-      objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -110.86
-      objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+    - target: {fileID: 65406511451863484, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
       propertyPath: m_LocalRotation.w
-      value: -0.021895697
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+    - target: {fileID: 65406511451863484, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.021349832
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+    - target: {fileID: 65406511451863484, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.7156402
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+    - target: {fileID: 65406511451863484, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.69779944
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+    - target: {fileID: 65406511451863484, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 88.554
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+    - target: {fileID: 65406511451863484, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -183.505
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 493753448596066323, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+    - target: {fileID: 65406511451863484, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 977838063193492137, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+    - target: {fileID: 832218093938459485, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
+      propertyPath: toggleBook
+      value: 
+      objectReference: {fileID: 1687252487}
+    - target: {fileID: 4664017056056898563, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
       propertyPath: m_Name
       value: Tome
-      objectReference: {fileID: 0}
-    - target: {fileID: 977838063193492137, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7120035894100963972, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7120035894100963972, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1683918872}
-    - targetCorrespondingSourceObject: {fileID: 7120035894100963972, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1683918871}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d21c735a5232d684d8388b263bb91d9b, type: 3}
 --- !u!1 &1734846162
 GameObject:
@@ -17197,9 +17135,9 @@ RectTransform:
   - {fileID: 773373111581286135}
   - {fileID: 2376558336722512592}
   - {fileID: 471587760}
+  - {fileID: 534429190}
   - {fileID: 1158250206}
   - {fileID: 1399580299}
-  - {fileID: 534429190}
   - {fileID: 1666510469}
   - {fileID: 341321918028900192}
   - {fileID: 1324497490}
