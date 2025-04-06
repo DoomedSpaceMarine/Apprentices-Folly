@@ -35,6 +35,8 @@ public class WizardBook : MonoBehaviour
             pagesRight[1].SetActive(false);
             pagesLeft[2].SetActive(false);
             pagesRight[2].SetActive(false);
+            pagesLeft[3].SetActive(false);
+            pagesRight[3].SetActive(false);
         }
 
         if (pageState == 1)
@@ -45,6 +47,8 @@ public class WizardBook : MonoBehaviour
             pagesRight[1].SetActive(true);
             pagesLeft[2].SetActive(false);
             pagesRight[2].SetActive(false);
+            pagesLeft[3].SetActive(false);
+            pagesRight[3].SetActive(false);
         }
 
         if (pageState == 2)
@@ -55,7 +59,22 @@ public class WizardBook : MonoBehaviour
             pagesRight[1].SetActive(false);
             pagesLeft[2].SetActive(true);
             pagesRight[2].SetActive(true);
+            pagesLeft[3].SetActive(false);
+            pagesRight[3].SetActive(false);
         }
+
+        if (pageState == 3)
+        {
+            pagesLeft[0].SetActive(false);
+            pagesRight[0].SetActive(false);
+            pagesLeft[1].SetActive(false);
+            pagesRight[1].SetActive(false);
+            pagesLeft[2].SetActive(false);
+            pagesRight[2].SetActive(false);
+            pagesLeft[3].SetActive(true);
+            pagesRight[3].SetActive(true);
+        }
+
 
     }
 

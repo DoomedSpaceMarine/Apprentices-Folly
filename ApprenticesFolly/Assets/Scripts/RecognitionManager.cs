@@ -207,7 +207,15 @@ public class RecognitionManager : MonoBehaviour
     {
         if (!toggleBook.bookIsOpen)
         {
-            ToggleSpellcastingMode();
+            if (context.started)
+            {
+                spellcastingMode = true;
+            }
+
+            if (context.canceled)
+            {
+                spellcastingMode = false;
+            }
         }
     }
 
