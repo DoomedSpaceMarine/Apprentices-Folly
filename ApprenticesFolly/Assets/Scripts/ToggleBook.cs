@@ -7,6 +7,8 @@ public class ToggleBook : MonoBehaviour
 
     [SerializeField] private GameObject wizardBook;
 
+    [SerializeField] private RecognitionManager recognitionManager; 
+
     private void Start()
     {
         wizardBook.SetActive(false);
@@ -19,10 +21,12 @@ public class ToggleBook : MonoBehaviour
         if(bookIsOpen)
         {
             wizardBook.SetActive(true);
+            recognitionManager.spellcastingMode = true;
         }
         else
         {
-            wizardBook.SetActive(false);    
+            wizardBook.SetActive(false);
+            recognitionManager.spellcastingMode = false;
         }
     }
 

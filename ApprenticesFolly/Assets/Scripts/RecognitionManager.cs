@@ -1,10 +1,14 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 public class RecognitionManager : MonoBehaviour
 {
     EventManager eventManager;
+
+    public bool spellcastingMode;
+    [SerializeField] private GameObject spellcastingUI;
 
     [SerializeField] private GameObject triangleObject;
     [SerializeField] private GameObject mGlyphObject;
@@ -27,6 +31,8 @@ public class RecognitionManager : MonoBehaviour
 
     private bool dynamicMode = true;
 
+   [SerializeField] private ToggleBook toggleBook;
+
     private void OnEnable()
     {
         eventManager = FindObjectOfType<EventManager>();
@@ -46,6 +52,19 @@ public class RecognitionManager : MonoBehaviour
         {
             SetPatternShape(zonePattern);
             SetPatternPosition(dynamicMode);
+        }
+
+        if (spellcastingMode)
+        {
+            spellcastingUI.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+        else
+        {
+            spellcastingUI.SetActive(false);
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
     }
 
@@ -183,6 +202,17 @@ public class RecognitionManager : MonoBehaviour
                 break;
 
             }
-        
+    }
+    public void SpellcastingModeInput(InputAction.CallbackContext context)
+    {
+        if (!toggleBook.bookIsOpen)
+        {
+            ToggleSpellcastingMode();
+        }
+    }
+
+    private void ToggleSpellcastingMode()
+    {
+        spellcastingMode = !spellcastingMode;   
     }
 }

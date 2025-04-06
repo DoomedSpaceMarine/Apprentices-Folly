@@ -80,17 +80,17 @@ public class ScoreSystem : MonoBehaviour
             {
                 scoreText.text = finalScore.ToString("0.0") + " Success";
 
-                if(recognitionManager.zonePattern == "triangle" && !toggleBook.bookIsOpen)
+                if(recognitionManager.zonePattern == "triangle" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("triangle");
                 }
 
-                if (recognitionManager.zonePattern == "m" && !toggleBook.bookIsOpen)
+                if (recognitionManager.zonePattern == "m" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("m");
                 }
 
-                if (recognitionManager.zonePattern == "rune" && !toggleBook.bookIsOpen)
+                if (recognitionManager.zonePattern == "rune" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("rune");
                 }

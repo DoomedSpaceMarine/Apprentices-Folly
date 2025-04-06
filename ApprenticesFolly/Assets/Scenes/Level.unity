@@ -9376,6 +9376,142 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1307213071}
   m_CullTransparentMesh: 1
+--- !u!1 &1324497489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1324497490}
+  - component: {fileID: 1324497492}
+  - component: {fileID: 1324497491}
+  m_Layer: 5
+  m_Name: SpellcastingText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1324497490
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324497489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9041540847576387349}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 496}
+  m_SizeDelta: {x: 514.803, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1324497491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324497489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: Spellcasting Mode
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4284269779
+  m_fontColor: {r: 0.827451, g: 0.76862746, b: 0.36078432, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 50
+  m_fontSizeBase: 50
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 1
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 256
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 0
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 3.4060822, y: 0, z: -0.26594546, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1324497492
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324497489}
+  m_CullTransparentMesh: 1
 --- !u!1 &1325912642
 GameObject:
   m_ObjectHideFlags: 0
@@ -12065,6 +12201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bookIsOpen: 0
   wizardBook: {fileID: 1771297322}
+  recognitionManager: {fileID: 5691656169094279807}
 --- !u!114 &1687252488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16525,6 +16662,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 41593867}
     - target: {fileID: 3810438972645023916, guid: 12d71c3037e59204280c5a773efc7a7b, type: 3}
+      propertyPath: toggleBook
+      value: 
+      objectReference: {fileID: 1687252487}
+    - target: {fileID: 3810438972645023916, guid: 12d71c3037e59204280c5a773efc7a7b, type: 3}
       propertyPath: mGlyphObject
       value: 
       objectReference: {fileID: 471587759}
@@ -16540,6 +16681,10 @@ PrefabInstance:
       propertyPath: triangleMinus
       value: 
       objectReference: {fileID: 196990008}
+    - target: {fileID: 3810438972645023916, guid: 12d71c3037e59204280c5a773efc7a7b, type: 3}
+      propertyPath: spellcastingUI
+      value: 
+      objectReference: {fileID: 1324497489}
     - target: {fileID: 3810438972645023916, guid: 12d71c3037e59204280c5a773efc7a7b, type: 3}
       propertyPath: triangleObject
       value: 
@@ -16601,6 +16746,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12d71c3037e59204280c5a773efc7a7b, type: 3}
+--- !u!114 &5691656169094279807 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3810438972645023916, guid: 12d71c3037e59204280c5a773efc7a7b, type: 3}
+  m_PrefabInstance: {fileID: 5691656169094279806}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b03a23eb64bbb414582b41f6d9446733, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!222 &5714477303726683939
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17045,6 +17201,10 @@ PrefabInstance:
       propertyPath: toggleBook
       value: 
       objectReference: {fileID: 1687252487}
+    - target: {fileID: 5319518608507160934, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: recognitionManager
+      value: 
+      objectReference: {fileID: 5691656169094279807}
     - target: {fileID: 5945493925109933199, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -17059,7 +17219,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.size
-      value: 22
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionId
@@ -17074,6 +17234,10 @@ PrefabInstance:
       value: 3ddf1b19-430c-4fb8-989e-ef7d6aec2a08
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_ActionId
+      value: 2142cb35-7568-4c41-a57e-e3712948d066
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_ActionName
       value: 'Player/WizardBook[/Keyboard/tab,/Keyboard/e,/Keyboard/i]'
       objectReference: {fileID: 0}
@@ -17086,6 +17250,10 @@ PrefabInstance:
       value: 'Player/SwitchPageBackwards[/Keyboard/a,/Keyboard/leftArrow]'
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_ActionName
+      value: 'Player/SpellcastingMode[/Keyboard/tab,/Keyboard/space]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
@@ -17095,6 +17263,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
@@ -17110,6 +17282,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1687252487}
@@ -17122,6 +17298,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1666628139}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5691656169094279807}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
@@ -17131,6 +17311,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
@@ -17146,6 +17330,10 @@ PrefabInstance:
       value: PagesBackward
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SpellcastingModeInput
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: ToggleBook, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -17156,6 +17344,10 @@ PrefabInstance:
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: WizardBook, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RecognitionManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_ActionEvents.Array.data[19].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -17169,6 +17361,10 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[21].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 6060685534271138055, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: m_ActionEvents.Array.data[22].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6774078883641056216, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -17177,6 +17373,10 @@ PrefabInstance:
       propertyPath: toggleBook
       value: 
       objectReference: {fileID: 1687252487}
+    - target: {fileID: 7009611338566610113, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
+      propertyPath: recognitionManager
+      value: 
+      objectReference: {fileID: 5691656169094279807}
     - target: {fileID: 7529758864923273980, guid: 6ceab49d7d03d754383dea9ec620f93e, type: 3}
       propertyPath: m_Name
       value: Player
@@ -17608,6 +17808,7 @@ RectTransform:
   - {fileID: 534429190}
   - {fileID: 1666510469}
   - {fileID: 341321918028900192}
+  - {fileID: 1324497490}
   - {fileID: 518312476}
   - {fileID: 247918632}
   m_Father: {fileID: 0}

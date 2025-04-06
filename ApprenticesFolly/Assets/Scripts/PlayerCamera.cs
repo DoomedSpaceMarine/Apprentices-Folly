@@ -7,6 +7,7 @@ public class PlayerCamera : MonoBehaviour
 
     [SerializeField] private TrailRendererManager trailRendererManager;
     [SerializeField] private ToggleBook toggleBook;
+    [SerializeField] private RecognitionManager recognitionManager; 
 
     private float xRotation;
 
@@ -17,7 +18,7 @@ public class PlayerCamera : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (!trailRendererManager.trailRenderer.emitting && !toggleBook.bookIsOpen) 
+        if (!trailRendererManager.trailRenderer.emitting && !toggleBook.bookIsOpen && !recognitionManager.spellcastingMode) 
         {
             //calculate camera rotation for looking up and down
             xRotation -= (mouse.y * Time.deltaTime) * xSensitivity;

@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     [SerializeField] private TrailRendererManager trailRendererManager;
     [SerializeField] private ToggleBook toggleBook;
+    [SerializeField] private RecognitionManager recognitionManager; 
 
     private void Awake()
     {
@@ -52,7 +53,7 @@ public class PlayerController : MonoBehaviour
 
     private void ProcessMovement()
     {
-        if (!trailRendererManager.trailRenderer.emitting && !toggleBook.bookIsOpen)
+        if (!trailRendererManager.trailRenderer.emitting && !toggleBook.bookIsOpen && !recognitionManager.spellcastingMode)
         {
             currentInputVector = Vector2.SmoothDamp(currentInputVector, movementDirection, ref smoothInputVelocity, smoothInputSpeed);
             Vector3 move = new Vector3(currentInputVector.x, 0, currentInputVector.y);
