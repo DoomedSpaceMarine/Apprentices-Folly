@@ -29,7 +29,7 @@ public class PlayerInteractable : MonoBehaviour
                 Interactables interactableObject = hitInfo.collider.GetComponent<Interactables>();
                 interactUI.EnableTextPrompt();
                 interactUI.SetTextForPrompt(interactableObject.interactionPrompt);
-                if (Input.GetMouseButtonDown(1))
+                if (Input.GetMouseButtonDown(0))
                 {
                     interactableObject.BaseInteract();
                 }
