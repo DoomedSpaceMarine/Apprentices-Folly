@@ -26,6 +26,14 @@ public class GameManager : MonoBehaviour
         eventManager.onGlyphDrawn -= GlyphDrawn;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
+
     private void GlyphDrawn(string glyph)
     {
         switch (glyph)
