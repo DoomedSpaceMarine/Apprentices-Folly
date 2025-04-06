@@ -55,5 +55,71 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 71508ec069e1cdb4192e440eb8c9118d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5069433562744464237}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 71508ec069e1cdb4192e440eb8c9118d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -279640386073587734}
   m_SourcePrefab: {fileID: 100100000, guid: 71508ec069e1cdb4192e440eb8c9118d, type: 3}
+--- !u!23 &4926286465229672220 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 71508ec069e1cdb4192e440eb8c9118d, type: 3}
+  m_PrefabInstance: {fileID: 6024755072304862104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6871739868913594057 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 71508ec069e1cdb4192e440eb8c9118d, type: 3}
+  m_PrefabInstance: {fileID: 6024755072304862104}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &5069433562744464237
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6871739868913594057}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3017804
+  m_Height: 0.554713
+  m_Direction: 1
+  m_Center: {x: 0.014388517, y: 0.14171723, z: -0.00457035}
+--- !u!205 &-279640386073587734
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6871739868913594057}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: 0, y: 0, z: 0}
+  m_Size: 1
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4926286465229672220}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4926286465229672220}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 4926286465229672220}
+  m_Enabled: 1

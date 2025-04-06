@@ -55,5 +55,71 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad661080532a7f242b4e6ed18afeb784, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1586361419248420846}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ad661080532a7f242b4e6ed18afeb784, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1996340346584856722}
   m_SourcePrefab: {fileID: 100100000, guid: ad661080532a7f242b4e6ed18afeb784, type: 3}
+--- !u!23 &879532300145515682 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: ad661080532a7f242b4e6ed18afeb784, type: 3}
+  m_PrefabInstance: {fileID: 2014565157740822566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1672037810871762295 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ad661080532a7f242b4e6ed18afeb784, type: 3}
+  m_PrefabInstance: {fileID: 2014565157740822566}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &-1586361419248420846
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672037810871762295}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.44107288
+  m_Height: 1.5100229
+  m_Direction: 0
+  m_Center: {x: -0.11079323, y: 0.30094957, z: -0.092815936}
+--- !u!205 &-1996340346584856722
+LODGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672037810871762295}
+  serializedVersion: 2
+  m_LocalReferencePoint: {x: -0.18185413, y: 0.30094954, z: -0.08365077}
+  m_Size: 1.3679011
+  m_FadeMode: 0
+  m_AnimateCrossFading: 0
+  m_LastLODIsBillboard: 0
+  m_LODs:
+  - screenRelativeHeight: 0.6
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 879532300145515682}
+  - screenRelativeHeight: 0.3
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 879532300145515682}
+  - screenRelativeHeight: 0.1
+    fadeTransitionWidth: 0
+    renderers:
+    - renderer: {fileID: 879532300145515682}
+  m_Enabled: 1
