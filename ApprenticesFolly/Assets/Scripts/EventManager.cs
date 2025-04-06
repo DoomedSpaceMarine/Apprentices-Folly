@@ -13,6 +13,10 @@ public class EventManager : MonoBehaviour
     public event Action<float> onAddScore;
     public void AddScore(float addition) => onAddScore?.Invoke(addition);
 
+    //Substract Score Event
+    public event Action<float> onSubstractScore;
+    public void SubstractScore(float substractition) => onSubstractScore?.Invoke(substractition);   
+
     //Get Max Score Event
     public event Action<float> onGetMaxScore;
     public void GetMaxScore(float shapeListLenght) => onGetMaxScore?.Invoke(shapeListLenght);

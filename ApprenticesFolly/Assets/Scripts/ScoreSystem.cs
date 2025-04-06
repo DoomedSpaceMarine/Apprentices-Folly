@@ -25,6 +25,7 @@ public class ScoreSystem : MonoBehaviour
         eventManager.onAddScore += AddScore;
         eventManager.onGetMaxScore += GetMaxScore;
         eventManager.onResetScore += ResetScore;
+        eventManager.onSubstractScore += SubstractScore;
     }
 
     private void OnDisable()
@@ -33,6 +34,7 @@ public class ScoreSystem : MonoBehaviour
         eventManager.onAddScore -= AddScore;
         eventManager.onGetMaxScore -= GetMaxScore;
         eventManager.onResetScore -= ResetScore;
+        eventManager.onSubstractScore -= SubstractScore;
     }
 
     private void Start()
@@ -49,6 +51,11 @@ public class ScoreSystem : MonoBehaviour
     private void AddScore(float addition)
     {
         currentScore += addition;   
+    }
+
+    private void SubstractScore(float substraction)
+    {
+        currentScore -= substraction;   
     }
 
     private void GetMaxScore(float shapeListLenght)
@@ -73,17 +80,17 @@ public class ScoreSystem : MonoBehaviour
             {
                 scoreText.text = finalScore.ToString("0.0") + " Success";
 
-                if(recognitionManager.zonePattern == "triangle" && !toggleBook.bookIsOpen)
+                if(recognitionManager.zonePattern == "triangle" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("triangle");
                 }
 
-                if (recognitionManager.zonePattern == "m" && !toggleBook.bookIsOpen)
+                if (recognitionManager.zonePattern == "m" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("m");
                 }
 
-                if (recognitionManager.zonePattern == "rune" && !toggleBook.bookIsOpen)
+                if (recognitionManager.zonePattern == "rune" && !toggleBook.bookIsOpen && recognitionManager.spellcastingMode)
                 {
                     eventManager.GlyphDrawn("rune");
                 }

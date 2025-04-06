@@ -112,6 +112,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "SpellcastingMode",
+                    "type": "Button",
+                    "id": "2142cb35-7568-4c41-a57e-e3712948d066",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -458,17 +467,6 @@
                 },
                 {
                     "name": "",
-                    "id": "912f70c5-264c-43b0-a6e2-984abc5d9186",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "WizardBook",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "efefb849-1003-4938-ad3e-9286b4d45de4",
                     "path": "<Keyboard>/e",
                     "interactions": "",
@@ -530,6 +528,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "SwitchPageBackwards",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ebd56618-17f3-4347-90aa-c8bdb12074be",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpellcastingMode",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fb56019f-1d8e-4f7b-9f6a-a706e8e51a82",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SpellcastingMode",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
