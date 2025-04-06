@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 1
+  m_Fog: 0
   m_FogColor: {r: 0.09019608, g: 0.10980393, b: 0.20392159, a: 1}
   m_FogMode: 3
   m_FogDensity: 0.093
@@ -327,7 +327,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2018912944965566856, guid: 0a0b7acaa2c819349b72a91e25226ef8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.8964505
       objectReference: {fileID: 0}
     - target: {fileID: 2018912944965566856, guid: 0a0b7acaa2c819349b72a91e25226ef8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -365,6 +365,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3571218625237418222, guid: 0a0b7acaa2c819349b72a91e25226ef8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -378,6 +382,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 80478115490006363, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.408695
+      objectReference: {fileID: 0}
+    - target: {fileID: 605431156232253446, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.73
+      objectReference: {fileID: 0}
     - target: {fileID: 1355473232278580892, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -418,9 +430,33 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1418638419192501258, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.447697
+      objectReference: {fileID: 0}
+    - target: {fileID: 2352373935600020616, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.840199
+      objectReference: {fileID: 0}
+    - target: {fileID: 2806863930237490596, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 12.776451
+      objectReference: {fileID: 0}
+    - target: {fileID: 5516863841714009897, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 8.834881
+      objectReference: {fileID: 0}
+    - target: {fileID: 6065957927313934568, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.765331
+      objectReference: {fileID: 0}
     - target: {fileID: 8139194953279005013, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
       propertyPath: m_Name
       value: Enviroment
+      objectReference: {fileID: 0}
+    - target: {fileID: 8217745975018110872, guid: 101fa5fa6d236d14faf7d5230aa344bf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.065533
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
